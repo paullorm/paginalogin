@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+	color: #323232;
+	border: none;
+}
+
+body {
+	background-color: rgb(77, 76, 76);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+
+.login-container {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	color: #fff;
+	background: #323232;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;	
+}
+
+.login-container::before, .login-container::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: calc(100% + 5px);
+	height: calc(100% + 5px);
+	background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #a200ff);
+	background-size: 300%;
+	border-radius: 8px;
+	animation: AnimarBorda 8s linear infinite;
+}
+
+@keyframes AnimarBorda {
+	0% {
+		background-position: 0;
+	}
+	100% {
+		background-position: 300%;
+	}
+}
+
+.login-container::after {
+	filter: blur(50px);
+}
+
+.login-geral {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.login-logo {
+	width: 100%;
+	height: 100px;
+	padding: 30px;
+}
+
+.login-logo img {
+	width: 80px;
+	margin-left: 40%;
+	margin-right: auto;
+}
+
+.login-form {
+	width: 100%;
+	height: 300px;
+	padding: 30px;
+}
+
+input {
+	width: 80%;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: left;
+	border-bottom: 2px solid #323232;
+	padding: 10px;
+	font-size: 1rem;
+	margin-bottom: 20px;
+	background-color: rgb(77, 76, 76);
+	border-radius: 5px;
+	color:  white;
+}
+
+input:focus, label:focus {
+	border-bottom: 2px solid #00d2f9;
+	outline: none;
+}
+
+input[type="submit"] {
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-weight: bold;
+	border: none;
+	height: 40px;
+	margin-top: 20px;
+	border-radius: 15px;
+	color: black;
+	background-color: #00d2f9;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #03a2be;
+	transition: 0.5s;
+}
+
+#forgot-pass {
+	margin-left: auto;
+	display: block;
+	color: #00d2f9;
+	width: 150px;
+	font-size: 12px;
+}
+
+#forgot-pass:hover {
+	color: #03a2be;
+	transition: 0.5s;
+}
+
+.login-register {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-register p {
+	color: white;
+}
+
+.login-register a {
+	text-decoration: none;
+	color: #00d2f9;
+}
+
+.login-register a:hover {
+	color: #03a2be;
+	transition: 0.5s;
+}
